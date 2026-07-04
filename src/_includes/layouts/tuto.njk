@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+<article class="tuto-article">
+  <div class="container">
+    <div class="tuto-article__head">
+      <a href="/tutos/" class="tuto-article__back">&larr; Tous les tutos</a>
+      <div class="tuto-article__meta">
+        <span class="badge">{{ categorie | categoryLabel }}</span>
+        <span class="tuto-card__date">Mis a jour le {{ date | dateFr }}</span>
+      </div>
+      <h1 class="tuto-article__title">{{ title }}</h1>
+    </div>
+    <div class="tuto-article__body">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>

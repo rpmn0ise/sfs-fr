@@ -1,0 +1,35 @@
+# FAQ de SFS FR
+# Structure : une liste de sections, chacune avec un titre et une liste de questions.
+# Pour ajouter une question, ajoute un bloc "- question / reponse" dans la bonne section.
+# Pour ajouter une nouvelle section, ajoute un bloc "- section / questions" a la fin du fichier.
+
+- section: "Le jeu"
+  questions:
+    - question: "Qu'est-ce que Spaceflight Simulator ?"
+      reponse: "Spaceflight Simulator (SFS) est un jeu de simulation spatiale disponible sur mobile et PC, ou tu concois et pilotes tes propres fusees pour explorer le systeme solaire : mise en orbite, alunissage, missions interplanetaires, et plus encore."
+    - question: "Le jeu est-il gratuit ?"
+      reponse: "Oui, Spaceflight Simulator est gratuit sur mobile (iOS/Android), avec des extensions optionnelles disponibles. Une version PC existe egalement via Steam."
+    - question: "Sur quelles plateformes le jeu est-il disponible ?"
+      reponse: "Le jeu est disponible sur Android, iOS et PC (Steam). SFS2, la suite en developpement, est prevue en sortie simultanee sur mobile et Steam."
+    - question: "Quelle est la difference entre SFS et SFS2 ?"
+      reponse: "SFS2 est la suite du jeu original, actuellement en developpement. Elle apportera de nouvelles fonctionnalites : astronautes, modules de station spatiale, nouveaux moteurs, boosters, oceans, personnalisation des couleurs, et bien plus. Aucune date de sortie n'a encore ete annoncee."
+    - question: "Le jeu est-il difficile a prendre en main ?"
+      reponse: "Le jeu propose une bonne courbe de progression : les bases (decollage, mise en orbite simple) sont accessibles rapidement, mais maitriser les transferts orbitaux ou les missions complexes demande de la pratique. Le serveur est justement la pour t'aider a progresser !"
+    - question: "Y a-t-il des mods pour le jeu ?"
+      reponse: "Oui, la communaute SFS propose de nombreux mods (nouvelles pieces, textures, outils). Tu peux en discuter et en partager sur le serveur dans le salon dedie au modding."
+- section: "Le serveur Discord"
+  questions:
+    - question: "Comment rejoindre le serveur ?"
+      reponse: "Il te suffit de cliquer sur le bouton \"Rejoindre le Discord\" present sur ce site pour acceder directement au serveur."
+    - question: "Faut-il etre bon au jeu pour rejoindre ?"
+      reponse: "Absolument pas ! Le serveur est ouvert a tous les niveaux, des debutants qui decouvrent tout juste le jeu aux joueurs experimentes qui maitrisent les transferts orbitaux complexes."
+    - question: "Comment obtenir de l'aide sur le serveur ?"
+      reponse: "Rends-toi dans le salon #aide-et-entraide pour poser toutes tes questions sur l'orbite, l'atterrissage, l'optimisation de fusees ou le modding. La communaute et les tutos epingles sont la pour t'aider."
+    - question: "Comment partager mes creations/blueprints ?"
+      reponse: "Le salon #bp-sharing est fait pour ca : partage tes fusees et decouvre celles des autres membres."
+    - question: "Le serveur est-il modere ?"
+      reponse: "Oui, le serveur applique un reglement simple base sur le respect et la bonne ambiance, avec une equipe de moderation disponible en cas de besoin. Tu peux consulter le reglement complet dans le salon #regles."
+    - question: "Ou trouver les tutos ?"
+      reponse: "Les tutos sont disponibles a la fois sur ce site (section Tutos) et epingles dans le salon #tutos-guides du serveur Discord."
+    - question: "Le serveur va-t-il suivre l'actualite de SFS2 ?"
+      reponse: "Oui, un salon dedie permet de suivre les annonces et l'actualite de SFS2 au fur et a mesure de son developpement, avec un role a activer pour etre notifie des news."

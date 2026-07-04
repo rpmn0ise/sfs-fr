@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.baseline }}{% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="keywords" content="{{ keywords or site.keywords }}">
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Open Graph / partage Discord et reseaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.baseline }}{% endif %}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:image" content="{{ site.url }}{{ ogImage or site.ogImage }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "alternateName": "SFS FR - communaute francophone Spaceflight Simulator",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/assets/images/logo-512.png",
+    "sameAs": ["{{ site.discordUrl }}"],
+    "inLanguage": "fr"
+  }
+  </script>
+</head>
+<body>
+  <div class="starfield" aria-hidden="true"></div>
+
+  {% include "partials/header.njk" %}
+
+  <main id="contenu">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

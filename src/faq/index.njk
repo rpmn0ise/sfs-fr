@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+title: "FAQ"
+description: "Questions frequentes en francais sur Spaceflight Simulator et sur le serveur Discord francophone SFS FR."
+keywords: "FAQ Spaceflight Simulator, questions frequentes SFS, serveur Discord francophone, aide Spaceflight Simulator francais"
+permalink: /faq/
+---
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Questions frequentes</span>
+      <h1 class="section__title">FAQ</h1>
+      <p class="section__desc">Sur le jeu Spaceflight Simulator et sur le serveur SFS FR.</p>
+    </div>
+
+    <div class="faq-groups">
+      {% for group in faq %}
+      <div class="faq-group">
+        <h2 class="faq-group__title">{{ group.section }}</h2>
+        {% for item in group.questions %}
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>{{ item.question }}</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">
+              <p>{{ item.reponse }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="section__footer">
+      <a href="{{ site.discordUrl }}" class="btn btn--primary" target="_blank" rel="noopener">Rejoindre le Discord</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for group in faq %}
+    {% set groupIndex = loop.index0 %}
+    {% for item in group.questions %}
+    {% if not (groupIndex == 0 and loop.index0 == 0) %},{% endif %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | dump | safe }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.reponse | trim | dump | safe }}
+      }
+    }
+    {% endfor %}
+    {% endfor %}
+  ]
+}
+</script>

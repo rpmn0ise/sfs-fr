@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+title: null
+description: "Rejoins SFS FR, la communaute Discord francophone de Spaceflight Simulator : entraide, blueprints, tutos et parties entre pilotes."
+keywords: "SFS FR, Spaceflight Simulator francais, communaute francophone, Discord Spaceflight Simulator, serveur SFS francais"
+permalink: /
+---
+<section class="hero">
+  <div class="container">
+    <span class="hero__eyebrow">Communaute Spaceflight Simulator</span>
+    <img src="/assets/images/logo-256.png" alt="Logo SFS FR" class="hero__logo" width="96" height="96">
+    <h1 class="hero__title">Mets ta fusee <span>en orbite</span>,<br>pas ta patience.</h1>
+    <p class="hero__subtitle">
+      SFS FR est la communaute Discord francophone de Spaceflight Simulator.
+      On s'entraide, on partage nos blueprints et on apprend ensemble, du
+      premier decollage rate jusqu'aux missions interplanetaires.
+    </p>
+    <div class="hero__actions">
+      <a href="{{ site.discordUrl }}" class="btn btn--primary" target="_blank" rel="noopener">Rejoindre le Discord</a>
+      <a href="/tutos/" class="btn btn--ghost">Voir les tutos</a>
+    </div>
+
+    <svg class="hero__trail" viewBox="0 0 720 90" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
+      <path d="M10 70 Q 180 10, 360 45 T 710 20" stroke="#F5821F" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.7"/>
+      <circle cx="10" cy="70" r="4" fill="#FF9E3D"/>
+      <circle cx="710" cy="20" r="4" fill="#FF9E3D"/>
+    </svg>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Pourquoi nous rejoindre</span>
+      <h2 class="section__title">Une communaute qui pousse tes fusees plus haut</h2>
+    </div>
+
+    <div class="reasons">
+      <div class="reason-card">
+        <div class="reason-card__badge">EN</div>
+        <h3>Entraide reelle</h3>
+        <p>Des joueurs actifs pour t'aider a decoller, atterrir ou reparer ta derniere fusee qui a explose au lancement.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-card__badge">BP</div>
+        <h3>Blueprints partages</h3>
+        <p>Des designs de fusees postes par la communaute, du cargo lunaire basique aux vaisseaux interplanetaires optimises.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-card__badge">TU</div>
+        <h3>Tutos accessibles</h3>
+        <p>Des guides clairs sur la mise en orbite, l'atterrissage en douceur et l'optimisation du carburant.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-card__badge">FR</div>
+        <h3>100% francophone</h3>
+        <p>Une communaute en francais, ouverte a tous les niveaux, du premier vol jusqu'aux missions les plus ambitieuses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Derniers guides</span>
+      <h2 class="section__title">Tutos pour progresser</h2>
+      <p class="section__desc">Un apercu des guides disponibles sur le site.</p>
+    </div>
+
+    <div class="tuto-grid">
+      {% for tuto in collections.tutos | limit(3) %}
+      <a href="{{ tuto.url }}" class="tuto-card">
+        <div class="tuto-card__meta">
+          <span class="badge">{{ tuto.data.categorie | categoryLabel }}</span>
+          <span class="tuto-card__date">{{ tuto.data.date | dateFr }}</span>
+        </div>
+        <h3>{{ tuto.data.title }}</h3>
+        <p>{{ tuto.data.description }}</p>
+        <span class="tuto-card__link">Lire le tuto</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="section__footer">
+      <a href="/tutos/" class="btn btn--ghost">Voir tous les tutos</a>
+    </div>
+  </div>
+</section>

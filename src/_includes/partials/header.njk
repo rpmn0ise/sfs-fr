@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="brand">
+      <img src="/assets/images/logo-256.png" alt="{{ site.title }}" width="44" height="44" class="brand__logo">
+      <span class="brand__name">SFS<span class="brand__name-accent">FR</span></span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="sr-only">Ouvrir le menu</span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="/" class="site-nav__link">Accueil</a>
+      <a href="/tutos/" class="site-nav__link">Tutos</a>
+      <a href="/faq/" class="site-nav__link">FAQ</a>
+      <a href="/a-propos/" class="site-nav__link">A propos</a>
+      <a href="{{ site.discordUrl }}" class="btn btn--small btn--primary site-nav__cta" target="_blank" rel="noopener">Rejoindre le Discord</a>
+    </nav>
+  </div>
+</header>

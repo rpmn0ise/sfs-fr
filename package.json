@@ -1,0 +1,14 @@
+{
+  "name": "sfsfr-site",
+  "version": "1.0.0",
+  "description": "Site statique de la communaute SFS FR (Spaceflight Simulator francophone)",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "js-yaml": "^4.1.0"
+  }
+}

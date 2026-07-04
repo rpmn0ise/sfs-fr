@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: "Tutos"
+description: "Tutos ecrits par la communaute francophone SFS FR : mise en orbite, atterrissage, optimisation et modding sur Spaceflight Simulator."
+keywords: "tutos Spaceflight Simulator, guide francais SFS, mise en orbite, atterrissage lune, optimisation fusee, modding SFS"
+permalink: /tutos/
+---
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Guides de la communaute</span>
+      <h1 class="section__title">Tutos Spaceflight Simulator</h1>
+      <p class="section__desc">Des guides ecrits par la communaute pour progresser, de l'orbite au modding.</p>
+    </div>
+
+    <div class="tuto-filters" data-tuto-filters>
+      <button class="tuto-filter is-active" data-category="all">Tous</button>
+      <button class="tuto-filter" data-category="orbite">Orbite</button>
+      <button class="tuto-filter" data-category="atterrissage">Atterrissage</button>
+      <button class="tuto-filter" data-category="optimisation">Optimisation</button>
+      <button class="tuto-filter" data-category="modding">Modding</button>
+    </div>
+
+    <div class="tuto-grid" data-tuto-grid>
+      {% for tuto in collections.tutos %}
+      <a href="{{ tuto.url }}" class="tuto-card" data-category="{{ tuto.data.categorie }}">
+        <div class="tuto-card__meta">
+          <span class="badge">{{ tuto.data.categorie | categoryLabel }}</span>
+          <span class="tuto-card__date">{{ tuto.data.date | dateFr }}</span>
+        </div>
+        <h3>{{ tuto.data.title }}</h3>
+        <p>{{ tuto.data.description }}</p>
+        <span class="tuto-card__link">Lire le tuto</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
