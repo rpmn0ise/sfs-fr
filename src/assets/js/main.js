@@ -19,7 +19,7 @@
     });
   }
 
-  /* Accordeon FAQ */
+  /* Accordéon FAQ */
   document.querySelectorAll(".faq-item").forEach(function (item) {
     var button = item.querySelector(".faq-item__question");
     if (!button) return;
@@ -30,7 +30,7 @@
     });
   });
 
-  /* Filtre de tutos par categorie */
+  /* Filtre de tutos par catégorie */
   var filterBar = document.querySelector("[data-tuto-filters]");
   var grid = document.querySelector("[data-tuto-grid]");
 

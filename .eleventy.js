@@ -21,8 +21,8 @@ module.exports = function (eleventyConfig) {
   // Human readable date filter, e.g. 3 juillet 2026
   eleventyConfig.addFilter("dateFr", function (dateObj) {
     const mois = [
-      "janvier", "fevrier", "mars", "avril", "mai", "juin",
-      "juillet", "aout", "septembre", "octobre", "novembre", "decembre"
+      "janvier", "février", "mars", "avril", "mai", "juin",
+      "juillet", "août", "septembre", "octobre", "novembre", "décembre"
     ];
     const d = new Date(dateObj);
     return `${d.getDate()} ${mois[d.getMonth()]} ${d.getFullYear()}`;
